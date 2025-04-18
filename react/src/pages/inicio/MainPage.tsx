@@ -7,6 +7,12 @@ function App() {
   return(
     <Fragment>
       <Header></Header>
+      <div id="welcome-box">
+        <div id="welcome-text">
+          <h1>El Cantautor</h1>
+          <p>Bienvenido/a a nuestra tienda online!</p>
+        </div>
+      </div>
       <div id="info-image">
         <img src={guitar} alt="Guitarra electrica"/>
         <div id="info-box">
