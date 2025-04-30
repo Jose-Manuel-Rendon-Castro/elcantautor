@@ -24,6 +24,36 @@ function App() {
           </div>
         </div>
       </div>
+      <div id="beneficios-box">
+        <div id="beneficios-list-box">
+          <ul id ="beneficios-list">
+            <li className="beneficio">
+              <div>
+                <p className="number"></p>
+                <p className="text"></p>
+              </div>
+            </li>
+            <li className="beneficio">
+              <div>
+                <p className="number"></p>
+                <p className="text"></p>
+              </div>
+            </li>
+            <li className="beneficio">
+              <div>
+                <p className="number"></p>
+                <p className="text"></p>
+              </div>
+            </li>
+            <li className="beneficio">
+              <div>
+                <p className="number"></p>
+                <p className="text"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </Fragment>
   )
 }
