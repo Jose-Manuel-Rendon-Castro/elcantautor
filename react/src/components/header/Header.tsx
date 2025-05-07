@@ -58,6 +58,14 @@ function Header() {
                             <li><a href="#">Consolas de audio</a></li>
                         </ul>
                     </li>
+                    <a href="react/src/pages/login/Login.tsx">
+                        <button>
+                            <span>Iniciar Sesión</span>
+                        </button>
+                    </a>
+                    <button>
+                        <span>Registrarse</span>
+                    </button>
                 </ul>
             </nav>
         </header>

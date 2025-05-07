@@ -65,3 +65,16 @@ ul li ul li ul {
 ul li ul li:hover > ul {
     display: block;
 }
+
+button {
+    border: 5px solid rgb(148, 43, 43);
+    background-color: crimson;
+}
+
+button:hover {
+    background-color: rgb(148, 43, 43);
+    border: 5px solid crimson;
+}
+span {
+    color: white;
+}
