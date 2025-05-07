@@ -7,8 +7,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("./images/bass-guitar-login.jpg");    
+.body {
+    background-image: url("../../assets/bass-guitar-login.jpg");    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
