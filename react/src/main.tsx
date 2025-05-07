@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './pages/inicio/MainPage.tsx'
 import 'bootstrap/dist/css/bootstrap.css'
 import Login from './pages/login/Login.tsx'
+import CrearCuenta from './pages/crearCuenta/CrearCuenta.tsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />
+  },
+  {
+    path: '/crear-cuenta',
+    element: <CrearCuenta />
   }
 ])
 

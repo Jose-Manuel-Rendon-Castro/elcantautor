@@ -1,4 +1,4 @@
-import guitar from "../../images/electricGuitar.jpg"
+import guitar from "../../assets/electricGuitar.webp"
 import Header from "../../components/header/Header";
 import "./mainPageStyle.css"
 import { Fragment } from "react/jsx-runtime";
@@ -8,7 +8,7 @@ function App() {
     <Fragment>
       <Header></Header>
       <div id="info-image">
-        <img src={guitar} alt="Guitarra electrica"/>
+        <img loading="lazy" src={guitar} alt="Guitarra electrica"/>
         <div id="info-box">
           <div id="info">
             <strong>¿Quienes Somos?</strong>

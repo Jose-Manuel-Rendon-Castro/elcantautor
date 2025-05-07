@@ -63,9 +63,11 @@ function Header() {
                             <span>Iniciar Sesión</span>
                         </button>
                     </a>
-                    <button>
-                        <span>Registrarse</span>
-                    </button>
+                    <a href="/crear-cuenta">
+                        <button>
+                            <span>Registrarse</span>
+                        </button>
+                    </a>
                 </ul>
             </nav>
         </header>

@@ -1,19 +1,27 @@
 import { Fragment } from "react/jsx-runtime";
-import './loginStyle.css'
+import './crearCuentaStyle.css'
 
-function Login() {
+function CrearCuenta() {
     return (
         <Fragment>
             <div className="body">
                 <div className="wrapper">
                     <form action="">
-                    <h1>Iniciar Sesión</h1>
+                    <h1>Crear Cuenta</h1>
                         <div className="input-box">
                             <input type="text" placeholder="Nombre de usuario" required />
                             <i className='bx bxs-user'></i>
                         </div>
                         <div className="input-box">
+                            <input type="email" placeholder="Correo electrónico" required />
+                            <i className='bx bxs-user'></i>
+                        </div>
+                        <div className="input-box">
                             <input type="password" placeholder="Contraseña" required />
+                            <i className='bx bxs-lock-alt'></i>
+                        </div>
+                        <div className="input-box">
+                            <input type="password" placeholder="Confirmar contraseña" required />
                             <i className='bx bxs-lock-alt'></i>
                         </div>
 
@@ -21,14 +29,14 @@ function Login() {
                             <label><input type="checkbox" /> Recordar</label>
                             <a href="#">¿Olvidaste tu contraseña?</a>
                         </div>
-                        <button type="submit" className="btn">Iniciar sesión</button>
+                        <button type="submit" className="btn">Registrar cuenta</button>
 
                         <div className="register-link">
-                            <p>No tienes una cuenta todavía?  <a
-                            href="/crear-cuenta"> Registrate!</a></p>
+                            <p>¿Ya tienes cuenta?  <a
+                            href="/login"> Inicia sesión!</a></p>
                         </div>
                         <div className="volver">
-                            <a href="/">Ir a página principal</a>
+                            <a href="/">Ir a la página principal</a>
                         </div>
                     </form>
                 </div>
@@ -37,4 +45,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default CrearCuenta;
