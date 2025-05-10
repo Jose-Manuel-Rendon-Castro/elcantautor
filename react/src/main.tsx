@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './pages/inicio/MainPage.tsx'
 import Login from './pages/login/Login.tsx'
 import CrearCuenta from './pages/crearCuenta/CrearCuenta.tsx'
-import Articulos from './pages/pruebaAPI/Prueba.tsx'
+import Articulos from './pages/pruebaAPI/Articulos.tsx'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
   },
   {
     path: '/prueba',
+    element: <Articulos />
+  },
+  {
+    path: '/:categoria/:subcategoria',
     element: <Articulos />
   }
 ])
