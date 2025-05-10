@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const { pool } = require('./database')  
 
 const app = express();
@@ -6,12 +7,12 @@ const port = process.env.PORT || 3000;
 
 
 app.use(express.json())
+app.use(cors({ origin: 'http://localhost:5173'}))
 
 app.get('/api/articulos', async (req, res) => {
     const [rows] = await pool.query('SELECT * FROM articulos')
     res.json(rows)
 })
-
 /*
 app.get('/', (req, res) => {
     res.send('Hello world')
