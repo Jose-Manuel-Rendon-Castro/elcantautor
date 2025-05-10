@@ -29,7 +29,7 @@ ul li a {
     text-decoration: none;
 }
 
-ul li:hover {
+ul .header-items:hover {
     background-color: rgb(59, 56, 56);
 }
 
@@ -39,7 +39,7 @@ ul li ul {
     z-index: 1000;
 }
 
-ul li:hover > ul {
+ul .header-items:hover > ul {
     display: block;
 }
 

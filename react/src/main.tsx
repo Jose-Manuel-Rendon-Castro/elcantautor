@@ -2,9 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './pages/inicio/MainPage.tsx'
-import 'bootstrap/dist/css/bootstrap.css'
 import Login from './pages/login/Login.tsx'
 import CrearCuenta from './pages/crearCuenta/CrearCuenta.tsx'
+import Articulos from './pages/pruebaAPI/Prueba.tsx'
+
+import 'bootstrap/dist/css/bootstrap.css'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/crear-cuenta',
     element: <CrearCuenta />
+  },
+  {
+    path: '/prueba',
+    element: <Articulos />
   }
 ])
 
