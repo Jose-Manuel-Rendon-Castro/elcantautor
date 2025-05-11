@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './headerStyle.css'
+import '../../data/categoriaArticulos.json'
 
 function Header() {
     return(
@@ -28,17 +29,12 @@ function Header() {
                     <li className='header-items'>
                         <span>Baterias y percusiones ▾</span>
                         <ul>
-                            <li className='header-items'>
-                                <span>Baterias ▾</span>
-                                <ul>
-                                    <li className='header-items'><Link to="/Percusion/Baterias/Acustico">Bateria acustica</Link></li>
-                                    <li className='header-items'><Link to="/Percusion/Baterias/Electrico">Bateria electrica</Link></li>
-                                    <li className='header-items'><Link to="/Percusion/Baterias/Tambores">Tambores</Link></li>
-                                    <li className='header-items'><Link to="/Percusion/Baterias/Tarolas">Tarolas</Link></li>
-                                    <li className='header-items'><Link to="/Percusion/Baterias/Platillos/">Platillos</Link></li>
-                                    <li className='header-items'><Link to="/Percusion/Baterias/Pedales">Pedales</Link></li>
-                                </ul>
-                            </li>
+                            <li className='header-items'><Link to="/Percusion/Bateria_Acustica">Bateria acustica</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Bateria_Electrica">Bateria electrica</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Tambores">Tambores</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Tarolas">Tarolas</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Platillos/">Platillos</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Pedales">Pedales</Link></li>
                             <li className='header-items'><Link to="/Percusion/Percusion">Instrumentos de percusion</Link></li>
                             <li className='header-items'><Link to="/Percusion/Latina">Percusíon latina</Link></li>
                             <li className='header-items'><Link to="/Percusion/Accesorios">Accesorios</Link></li>
