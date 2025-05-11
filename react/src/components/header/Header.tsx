@@ -41,6 +41,7 @@ function Header() {
                             </li>
                             <li className='header-items'><Link to="/Percusion/Percusion">Instrumentos de percusion</Link></li>
                             <li className='header-items'><Link to="/Percusion/Latina">Percusíon latina</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Accesorios">Accesorios</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
