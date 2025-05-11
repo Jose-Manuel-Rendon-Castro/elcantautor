@@ -71,10 +71,6 @@ button {
     background-color: crimson;
 }
 
-button:hover {
-    background-color: rgb(148, 43, 43);
-    border: 5px solid crimson;
-}
 span {
     color: white;
 }

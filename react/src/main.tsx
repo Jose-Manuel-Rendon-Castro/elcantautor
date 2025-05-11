@@ -22,11 +22,11 @@ const router = createBrowserRouter([
     element: <CrearCuenta />
   },
   {
-    path: '/prueba',
+    path: '/:categoria/:subcategoria',
     element: <Articulos />
   },
   {
-    path: '/:categoria/:subcategoria',
+    path: '/:categoria/:subcategoria/:subsubcategoria',
     element: <Articulos />
   }
 ])

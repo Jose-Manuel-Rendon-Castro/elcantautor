@@ -6,57 +6,57 @@ function Header() {
         <header>
             <nav>
                 <ul>
-                    <li><button className='logo'><h1>El cantautor</h1></button></li>
+                    <li><button className='logo'><Link to="/"><h1>El cantautor</h1></Link></button></li>
                     <li className='header-items'>
-                        <Link to="#">Guitarras  ▾</Link>
+                        <span>Guitarras  ▾</span>
                         <ul>
-                            <li className='header-items'><Link to="#">Guitarras acusticas</Link></li>
-                            <li className='header-items'><Link to="#">Guitarras electroacusticas</Link></li>
-                            <li className='header-items'><Link to="#">Guitarras electricas</Link></li>
-                            <li className='header-items'><Link to="#">Accesorios para guitarra</Link></li>
+                            <li className='header-items'><Link to="/Guitarras/Acustico">Guitarras acusticas</Link></li>
+                            <li className='header-items'><Link to="/Guitarras/Electroacusticas">Guitarras electroacusticas</Link></li>
+                            <li className='header-items'><Link to="/Guitarras/Electrico">Guitarras electricas</Link></li>
+                            <li className='header-items'><Link to="/Guitarras/Accesorio">Accesorios para guitarra</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
-                        <Link to="#">Bajos  ▾</Link>
+                        <span>Bajos  ▾</span>
                         <ul>
-                            <li className='header-items'><Link to="#">Bajos acusticos</Link></li>
-                            <li className='header-items'><Link to="#">Bajos electroacusticos</Link></li>
-                            <li className='header-items'><Link to="#">Bajos electricos</Link></li>
-                            <li className='header-items'><Link to="#">Accesorios para Bajo</Link></li>
+                            <li className='header-items'><Link to="/Bajos/Acustico">Bajos acusticos</Link></li>
+                            <li className='header-items'><Link to="/Bajos/Electroacusticas">Bajos electroacusticos</Link></li>
+                            <li className='header-items'><Link to="/Bajos/Electrico">Bajos electricos</Link></li>
+                            <li className='header-items'><Link to="/Bajos/Accesorio">Accesorios para Bajo</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
-                        <Link to="#">Baterias y percusiones ▾</Link>
+                        <span>Baterias y percusiones ▾</span>
                         <ul>
                             <li className='header-items'>
-                                <Link to="#">Baterias ▾</Link>
+                                <span>Baterias ▾</span>
                                 <ul>
-                                    <li className='header-items'><Link to="#">Bateria acustica</Link></li>
-                                    <li className='header-items'><Link to="#">Bateria electrica</Link></li>
-                                    <li className='header-items'><Link to="#">Tambores</Link></li>
-                                    <li className='header-items'><Link to="#">Tarolas</Link></li>
-                                    <li className='header-items'><Link to="#">Platillos</Link></li>
-                                    <li className='header-items'><Link to="#">Pedales</Link></li>
+                                    <li className='header-items'><Link to="/Percusion/Baterias/Acustico">Bateria acustica</Link></li>
+                                    <li className='header-items'><Link to="/Percusion/Baterias/Electrico">Bateria electrica</Link></li>
+                                    <li className='header-items'><Link to="/Percusion/Baterias/Tambores">Tambores</Link></li>
+                                    <li className='header-items'><Link to="/Percusion/Baterias/Tarolas">Tarolas</Link></li>
+                                    <li className='header-items'><Link to="/Percusion/Baterias/Platillos/">Platillos</Link></li>
+                                    <li className='header-items'><Link to="/Percusion/Baterias/Pedales">Pedales</Link></li>
                                 </ul>
                             </li>
-                            <li className='header-items'><Link to="#">Instrumentos de percusion</Link></li>
-                            <li className='header-items'><Link to="#">Percusíon latina</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Percusion">Instrumentos de percusion</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Latina">Percusíon latina</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
-                        <Link to="#">Teclados y sintentizadores ▾</Link>
+                        <span>Teclados y sintentizadores ▾</span>
                         <ul>
-                            <li className='header-items'><Link to="#">Teclados</Link></li>
-                            <li className='header-items'><Link to="#">Sintetizadores</Link></li>
-                            <li className='header-items'><Link to="#">Accesorios</Link></li>
+                            <li className='header-items'><Link to="/Teclados/Electrico">Teclados</Link></li>
+                            <li className='header-items'><Link to="/Teclados/Sintetizador">Sintetizadores</Link></li>
+                            <li className='header-items'><Link to="/Teclados/Accesorio">Accesorios</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
-                        <Link to="#">Equipo de Audio  ▾</Link>
+                        <span>Equipo de Audio  ▾</span>
                         <ul>
-                            <li className='header-items'><Link to="#">Amplificadores</Link></li>
-                            <li className='header-items'><Link to="#">Altavoces</Link></li>
-                            <li className='header-items'><Link to="#">Consolas de audio</Link></li>
+                            <li className='header-items'><Link to="/Audio/Amplificadores">Amplificadores</Link></li>
+                            <li className='header-items'><Link to="/Audio/Altavoces">Altavoces</Link></li>
+                            <li className='header-items'><Link to="/Audio/Consolas">Consolas de audio</Link></li>
                         </ul>
                     </li>
                     <Link to="/login">
