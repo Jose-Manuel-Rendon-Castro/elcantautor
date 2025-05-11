@@ -1,0 +1,32 @@
+[
+    {
+      "categoria": "Guitarras",
+      "subcategoria": ["Acústico", "Electroacústico", "Eléctrico", "Accesorios"]
+    },
+    {
+      "categoria": "Bajos",
+      "subcategoria": ["Acústico", "Electroacústico", "Eléctrico", "Accesorios"]
+    },
+    {
+      "categoria": "Percusión",
+      "subcategoria": [
+        "Baterías Acústicas",
+        "Baterías Eléctricas",
+        "Tambores",
+        "Tarolas",
+        "Platillos",
+        "Pedales",
+        "Percusión Latina",
+        "Accesorios"
+      ]
+    },
+    {
+      "categoria": "Teclados",
+      "subcategoria": ["Eléctrico", "Sintetizador", "Accesorios"]
+    },
+    {
+      "categoria": "Audio",
+      "subcategorias": ["Amplificadores", "Altavoces", "Consolas"]
+    }
+  ]
+  
