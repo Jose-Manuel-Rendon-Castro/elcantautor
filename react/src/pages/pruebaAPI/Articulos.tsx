@@ -6,19 +6,22 @@ import Header from "../../components/header/Header";
 const Articulos = () => {
     const [articulos, setArticulos] = useState([]);
     const [cargando, setCargando] = useState(true);
+    const categoria = 'Guitarras';
+    const subcategoria = 'Electrico';
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/articulos')
-            .then(response => response.json())
-            .then(data => {
+        const fetchArticulos = async () => {
+            try {
+                const res = await fetch(`http://localhost:3000/${categoria}/${subcategoria}`);
+                const data = await res.json();
                 setArticulos(data);
-                setCargando(false);
-            })
-            .catch(error => {
-                console.error('Error al obtener articulos', error);
-                setCargando(false);
-            })
-    }, []);
+            }
+            catch (err) {
+                console.error('No jalo chale', err);
+            }
+        };
+        fetchArticulos();
+    }, [categoria, subcategoria]);
 
     if (cargando) return <p>Cargando productos...</p>;
 

@@ -9,10 +9,26 @@ const port = process.env.PORT || 3000;
 app.use(express.json())
 app.use(cors({ origin: 'http://localhost:5173'}))
 
+let categoria, subcategoria;
 
 app.get('/api/articulos', async (req, res) => {
     const [rows] = await pool.query('SELECT * FROM articulos')
     res.json(rows)
+})
+
+app.get('/:categoria/:subcategoria', async (req, res) => {
+    const { categoria, subcategoria } = req.params;
+
+    try {
+        const [rows] = await pool.query(
+            'SELECT * FROM articulos WHERE categoria = ? AND tipo = ?',
+            [categoria, subcategoria]
+        );
+        res.json(rows)
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: 'Error al obtener articulos'})
+    }
 })
 /*
 app.get('/', (req, res) => {
