@@ -1,16 +1,37 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Header from "../../components/header/Header";
+import { useParams } from "react-router-dom";
 
-
+interface Articulo {
+    id: number;
+    nombre: string;
+    categoria: string;
+    tipo: string;
+    precio: number;
+}
 
 const Articulos = () => {
-    const [articulos, setArticulos] = useState([]);
+    const { categoria, subcategoria } = useParams<{ categoria: string; subcategoria: string }>();
+    const [articulos, setArticulos] = useState<Articulo[]>([]);
     const [cargando, setCargando] = useState(true);
-    const categoria = 'Guitarras';
-    const subcategoria = 'Electrico';
 
     useEffect(() => {
         const fetchArticulos = async () => {
+            if (categoria && subcategoria) {
+                try {
+                    const res = await fetch(`http://localhost:3000/${categoria}/${subcategoria}`)
+                    const data = await res.json();
+                    setArticulos(data);
+                }
+                catch (err) {
+                    console.error('No jalo', err)
+                }
+                finally {
+                    setCargando(false)
+                }
+            }
+        }
+            /*const fetchArticulos = async () => {
             try {
                 const res = await fetch(`http://localhost:3000/${categoria}/${subcategoria}`);
                 const data = await res.json();
@@ -19,11 +40,14 @@ const Articulos = () => {
             catch (err) {
                 console.error('No jalo chale', err);
             }
-        };
+            finally {
+                setCargando(false)
+            }
+        };*/
         fetchArticulos();
     }, [categoria, subcategoria]);
 
-    if (cargando) return <p>Cargando productos...</p>;
+    if (cargando) return <p>Cargando...</p>;
 
     return (
         <div>
