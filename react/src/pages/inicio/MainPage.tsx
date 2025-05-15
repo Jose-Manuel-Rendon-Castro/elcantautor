@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import './mainPageStyle.css';
 import Header from "../../components/header/Header";
 import guitar from "../../assets/electricGuitar.webp";

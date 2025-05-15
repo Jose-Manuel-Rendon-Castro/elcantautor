@@ -12,7 +12,6 @@
   "type": "commonjs",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "react-router-dom": "^7.5.3",
-    "swiper": "^11.2.6"
+    "react-router-dom": "^7.5.3"
   }
 }
