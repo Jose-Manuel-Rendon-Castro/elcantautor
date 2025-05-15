@@ -19,6 +19,9 @@ const Articulos = () => {
             catch (err) {
                 console.error('No jalo chale', err);
             }
+            finally {
+                setCargando(false)
+            }
         };
         fetchArticulos();
     }, [categoria, subcategoria]);

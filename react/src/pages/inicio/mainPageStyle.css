@@ -3,7 +3,7 @@ img {
 }
 
 #info-image {
-    position: absolute;
+    position: relative;
 }
 
 #info-box{
@@ -31,3 +31,30 @@ strong {
 p {
     font-size: 20px;
 }
+
+/* Estilo general para contenedor */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.slider-box {
+    position: relative;
+    width: 100vw;
+}
+
+.slider-conteiner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider-conteiner img {
+    width: 10vw;
+    height: auto;
+    object-fit: contain;
+}
+
