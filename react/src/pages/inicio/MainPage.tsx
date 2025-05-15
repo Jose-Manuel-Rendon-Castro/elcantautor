@@ -9,6 +9,10 @@ import pearlLogo from "../../assets/Slider Img/pearl.png"
 import TresPinosLogo from "../../assets/Slider Img/Tres Pinos.png"
 import YamahaLogo from "../../assets/Slider Img/Yamaha.png"
 
+import Guitarras from "../../assets/Categorias Img/Guitarra y bajos.png"
+import Percusiones from "../../assets/Categorias Img/Percusiones.png"
+import Pianos from "../../assets/Categorias Img/Piano.png"
+import Amplificadores from "../../assets/Categorias Img/Amplificadores.png"
 
 function App() {
   return(
@@ -43,12 +47,25 @@ function App() {
       <section className="categories">
         <h2>Categorías Destacadas</h2>
         <div className="category-grid">
-          <div className="category-item">Guitarras</div>
-          <div className="category-item">Bajos</div>
-          <div className="category-item">Teclados</div>
-          <div className="category-item">Percusiones</div>
+          <div className="category-item">
+            <img src={Guitarras} alt="Guitarras Y Bajos" />
+            <span>Guitarras Y Bajos</span>
+          </div>
+          <div className="category-item">
+            <img src={Percusiones} alt="Percusiones" />
+            <span>Percusiones</span>
+          </div>
+          <div className="category-item">
+            <img src={Pianos} alt="Teclados" />
+            <span>Teclados</span>
+          </div>
+          <div className="category-item">
+            <img src={Amplificadores} alt="Amplificadores" />
+            <span>Amplificadores</span>
+          </div>
         </div>
       </section>
+    
 
       {/* Testimonios */}
       <section className="testimonials">
