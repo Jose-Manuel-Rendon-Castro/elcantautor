@@ -19,7 +19,7 @@ app.get('/:categoria/:subcategoria', async (req, res) => {
 
     try {
         const [rows] = await pool.query(
-            'SELECT * FROM Articulos WHERE categoria = ? AND tipo = ?',
+            'SELECT * FROM vista_articulos_detalle WHERE categoria = ? AND subcategoria = ?',
             [categoria, subcategoria]
         );
         res.json(rows)

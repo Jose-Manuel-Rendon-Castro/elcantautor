@@ -1,11 +1,12 @@
 import { use, useEffect, useState } from "react";
 import Header from "../../components/header/Header";
-import { useParams } from "react-router-dom";
+import { data, useParams } from "react-router-dom";
 
 interface Articulo {
     id: number;
     nombre: string;
     categoria: string;
+    descripcion: string;
     tipo: string;
     precio: number;
 }
@@ -31,19 +32,6 @@ const Articulos = () => {
                 }
             }
         }
-            /*const fetchArticulos = async () => {
-            try {
-                const res = await fetch(`http://localhost:3000/${categoria}/${subcategoria}`);
-                const data = await res.json();
-                setArticulos(data);
-            }
-            catch (err) {
-                console.error('No jalo chale', err);
-            }
-            finally {
-                setCargando(false)
-            }
-        };*/
         fetchArticulos();
     }, [categoria, subcategoria]);
 
@@ -54,8 +42,8 @@ const Articulos = () => {
             <Header></Header>
             <h1>Lista de articulos</h1>
             <ul>
-                {articulos.map((articulo: any) => (
-                    <li key={articulo.articulo_id}>
+                {articulos.map((articulo: Articulo) => (
+                    <li key={articulo.id}>
                         {articulo.descripcion} - ${articulo.precio}
                     </li>
                 ))}
