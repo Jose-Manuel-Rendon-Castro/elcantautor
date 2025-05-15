@@ -1,6 +1,6 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
-import { data, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 interface Articulo {
     id: number;
