@@ -1,0 +1,8 @@
+#background {
+    background-color: rgb(140, 15, 15);
+}
+
+.grid-container {
+    text-align: center;
+    display: inline-block;
+}
