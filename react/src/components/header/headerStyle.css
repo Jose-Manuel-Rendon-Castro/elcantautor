@@ -3,6 +3,15 @@ header {
     background-color: rgb(20, 20, 20    );
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: rgb(20, 20, 20);
+}
+
 nav .logo {
     background-color: rgb(20, 20, 20);
     border-style: none;
