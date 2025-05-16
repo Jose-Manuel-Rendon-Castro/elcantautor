@@ -33,15 +33,18 @@ function App() {
       {/* Slider de imágenes */}
       
       <div className="slider-box">
-        <div className="slider-conteiner">
-          <img src={fenderLogo} alt="" />
-          <img src={ibanezLogo} alt="" />
-          <img src={KorgLogo} alt="" />
-          <img src={pearlLogo} alt="" />
-          <img src={TresPinosLogo} alt="" />
-          <img src={YamahaLogo} alt="" />
+         <h2>Marcas Destacadas</h2>
+         <div className="slider-track">
+              {[
+                fenderLogo, ibanezLogo, KorgLogo, pearlLogo, TresPinosLogo, YamahaLogo,
+                fenderLogo, ibanezLogo, KorgLogo, pearlLogo, TresPinosLogo, YamahaLogo,
+                fenderLogo, ibanezLogo, KorgLogo, pearlLogo, TresPinosLogo, YamahaLogo,
+               ].map((logo, i) => (
+                <img key={i} src={logo} alt={`logo-${i}`} />
+               ))}  
+          </div>     
         </div>
-      </div>
+      
 
       {/* Categorías destacadas */}
       <section className="categories">

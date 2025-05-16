@@ -32,7 +32,7 @@ p {
     font-size: 20px;
 }
 
-/* Estilo general para contenedor */
+/*---------------------------SLIDER---------------------------------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -41,22 +41,37 @@ body {
 }
 
 .slider-box {
-    position: relative;
-    width: 100vw;
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
 }
 
-.slider-conteiner {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.slider-track {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: scrollSlider 30s linear infinite;
 }
 
-.slider-conteiner img {
-    width: 10vw;
-    height: auto;
-    object-fit: contain;
+.slider-track img {
+  width: 10vw;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
 }
+
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+/* --------------------------CATEGORIAS------------------------------- */
 .categories {
   padding: 2rem;
   background-color: #f9f9f9;
