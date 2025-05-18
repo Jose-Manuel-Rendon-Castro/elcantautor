@@ -9,7 +9,7 @@ interface ArticuloProps {
 }
 
 
-function Card ({ marca = 'Marca no disponible', modelo = 'Modelo no disponible', imagenURL =  './././images/default-image.png', precio = 0, existencias = 0 }: ArticuloProps){
+function Articulo({ marca = 'Marca no disponible', modelo = 'Modelo no disponible', imagenURL =  './././images/default-image.png', precio = 0, existencias = 0 }: ArticuloProps){
     const precioFormateado = precio < 0 ? `$${precio}` : 'Precio No Disponible' 
     const existenciasTexto = existencias < 0 ? `Existencias: ${existencias}` : 'No Disponibles'
     return(
@@ -23,4 +23,4 @@ function Card ({ marca = 'Marca no disponible', modelo = 'Modelo no disponible',
     );
 }
 
-export default Card
+export default Articulo
