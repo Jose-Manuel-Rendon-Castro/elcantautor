@@ -1,5 +1,8 @@
 img {
     width: 100vw;
+    max-height: 80vh; /* Cambia 50vh por el valor que prefieras */
+    object-fit: cover;
+    display: block; /* Elimina espacio inferior causado por img inline */
 }
 
 #info-image {
@@ -44,7 +47,7 @@ body {
   overflow: hidden;
   width: 100%;
   padding: 2rem;
-  background-color: #fff;
+  background-color: #ece7e7;
   text-align: center;
 }
 

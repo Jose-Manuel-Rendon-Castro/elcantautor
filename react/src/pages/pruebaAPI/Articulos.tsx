@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
-
+import "../pruebaAPI/Articulos.css";
 
 
 const Articulos = () => {
@@ -26,7 +26,18 @@ const Articulos = () => {
         fetchArticulos();
     }, [categoria, subcategoria]);
 
-    if (cargando) return <p>Cargando productos...</p>;
+    if (cargando) {
+        return (
+            <div className="spinner-container">
+                <div className="music-loader">
+                    <div className="note"></div>
+                    <div className="note"></div>
+                    <div className="note"></div>
+                </div>
+                <p>Cargando productos...</p>
+            </div>
+        );
+    }
 
     return (
         <div>
