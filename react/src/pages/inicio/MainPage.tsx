@@ -8,7 +8,7 @@ function App() {
     <Fragment>
       <Header></Header>
       <div id="info-image">
-        <img loading="lazy" src={guitar} alt="Guitarra electrica"/>
+        <img src={guitar} alt="Imagen de guitarra, que chido se ve, apoco no?" />
         <div id="info-box">
           <div id="info">
             <strong>¿Quienes Somos?</strong>
@@ -16,36 +16,6 @@ function App() {
             
             Desde guitarras acústicas y eléctricas hasta micrófonos, teclados y accesorios, seleccionaremos cuidadosamente cada producto para ofrecer calidad, inspiración y autenticidad. Trabajamos con marcas reconocidas que comparten nuestra pasión por el sonido. ¡Bienvenido a tu hogar musical!</p>
           </div>
-        </div>
-      </div>
-      <div id="beneficios-box">
-        <div id="beneficios-list-box">
-          <ul id ="beneficios-list">
-            <li className="beneficio">
-              <div>
-                <p className="number"></p>
-                <p className="text"></p>
-              </div>
-            </li>
-            <li className="beneficio">
-              <div>
-                <p className="number"></p>
-                <p className="text"></p>
-              </div>
-            </li>
-            <li className="beneficio">
-              <div>
-                <p className="number"></p>
-                <p className="text"></p>
-              </div>
-            </li>
-            <li className="beneficio">
-              <div>
-                <p className="number"></p>
-                <p className="text"></p>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </Fragment>
