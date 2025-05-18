@@ -81,14 +81,20 @@ function App() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="newsletter">
+      {/* Footer */}
+      <footer className="footer">
+      <div className="newsletter">
         <h2>Suscríbete para recibir novedades</h2>
-        <input type="email" placeholder="Tu correo" />
-        <button className="btn-primary">Suscribirse</button>
-      </section>
-    </Fragment>
+        <form className="newsletter-form">
+          <input type="email" placeholder="CORREO ELECTRÓNICO" />
+          <button type="submit">ENVIAR</button>
+        </form>
+      </div>
+
+     </footer>
+   </Fragment> 
   );
-}
+};
+
 
 export default App;

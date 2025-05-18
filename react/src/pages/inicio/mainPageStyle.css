@@ -113,3 +113,47 @@ body {
   font-size: 1rem;
   color:#333333;
 }
+
+/* --------------------------FOOTER------------------------------- */
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px 0;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+}
+
+.newsletter h2 {
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  min-width: 250px;
+  border: none;
+}
+
+.newsletter-form button {
+  background-color: #e00e0e;
+  border: none;
+  padding: 10px 10%;
+  cursor: pointer;
+  font-weight: bold;
+}
