@@ -8,7 +8,7 @@ function App() {
     <Fragment>
       <Header></Header>
       <div id="info-image">
-        <img loading="lazy" src={guitar} alt="Guitarra electrica"/>
+        <img src={guitar} alt="Guitarra electrica"/>
         <div id="info-box">
           <div id="info">
             <strong>¿Quienes Somos?</strong>

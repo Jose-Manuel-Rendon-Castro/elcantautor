@@ -42,8 +42,4 @@
 img {
     position: relative;
     top: 50%;
-    left: 25%;
-    translate: -50% -50%;
-    height: 50%;
-    border-radius: 10px;
 }
