@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 import './headerStyle.css'
 import '../../data/categoriaArticulos.json'
+import LOGO2 from'../../assets/LOGO2.png'
 
 function Header() {
     return(
         <header>
-            <nav>
-                <ul>
-                    <li><button className='logo'><Link to="/"><h1>El cantautor</h1></Link></button></li>
+            <nav className="nav">
+                <div className="logo-container">
+                    <img src={LOGO2} alt="El Cantautor" className='logo' />
+                </div>
+               <ul>    
                     <li className='header-items'>
                         <span>Guitarras  ▾</span>
                         <ul>
@@ -56,17 +59,22 @@ function Header() {
                             <li className='header-items'><Link to="/Audio/Consolas">Consolas de audio</Link></li>
                         </ul>
                     </li>
-                    <Link to="/login">
+                </ul>
+                    
+                <div id="sesion">
+                    <Link to="/login" id="leftb">
                         <button>
                             <span>Iniciar Sesión</span>
                         </button>
                     </Link>
-                    <Link to="/crear-cuenta">
+
+                    <Link to="/crear-cuenta"id="rightb">
                         <button>
                             <span>Registrarse</span>
                         </button>
                     </Link>
-                </ul>
+                </div>
+
             </nav>
         </header>
     );
