@@ -1,12 +1,8 @@
 img {
     width: 100vw;
-<<<<<<< HEAD
-    position: relative;
-=======
     max-height: 80vh; /* Cambia 50vh por el valor que prefieras */
     object-fit: cover;
     display: block; /* Elimina espacio inferior causado por img inline */
->>>>>>> vale_paginaPrincipal
 }
 
 #info-image {

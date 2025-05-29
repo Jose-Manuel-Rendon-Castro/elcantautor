@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
-<<<<<<< HEAD
 import { useParams } from "react-router-dom";
+import "../pruebaAPI/Articulos.css";
 
 interface Articulo {
     id: number;
@@ -11,10 +11,7 @@ interface Articulo {
     tipo: string;
     precio: number;
 }
-=======
-import "../pruebaAPI/Articulos.css";
 
->>>>>>> vale_paginaPrincipal
 
 const Articulos = () => {
     const { categoria, subcategoria } = useParams<{ categoria: string; subcategoria: string }>();
@@ -36,19 +33,6 @@ const Articulos = () => {
                     setCargando(false)
                 }
             }
-<<<<<<< HEAD
-        }
-        fetchArticulos();
-    }, [categoria, subcategoria]);
-
-    if (cargando) return <p>Cargando...</p>;
-=======
-            catch (err) {
-                console.error('No jalo chale', err);
-            }
-            finally {
-                setCargando(false)
-            }
         };
         fetchArticulos();
     }, [categoria, subcategoria]);
@@ -65,7 +49,6 @@ const Articulos = () => {
             </div>
         );
     }
->>>>>>> vale_paginaPrincipal
 
     return (
         <div>

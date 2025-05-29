@@ -29,11 +29,6 @@ function App() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </Fragment>
-  )
-} 
-=======
 
       {/* Slider de imágenes */}
       
@@ -101,6 +96,5 @@ function App() {
   );
 };
 
->>>>>>> vale_paginaPrincipal
 
 export default App;
