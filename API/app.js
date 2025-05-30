@@ -28,7 +28,13 @@ app.get('/:categoria/:subcategoria', async (req, res) => {
         res.status(500).json({error: 'Error al obtener articulos'})
     }
 })
+
+app.post('/registrar', async (req, res) => {
+     await pool.query("INSERT INTO Usuarios (nombre_Usuario, correo_Electronico, contraseña) VALUES (?,?,?)" , [username, email, password], (err, result));
+})
+
 /*
+
 app.get('/', (req, res) => {
     res.send('Hello world')
 })

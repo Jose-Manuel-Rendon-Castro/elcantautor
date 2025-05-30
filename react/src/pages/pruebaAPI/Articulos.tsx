@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import { useParams } from "react-router-dom";
-import Card from "../../components/articulo/ArticuloTarjeta";
-import './ArticuloStyles.css'
+import "../pruebaAPI/Articulos.css";
 
 interface Articulo {
     id: number;
@@ -11,11 +10,8 @@ interface Articulo {
     descripcion: string;
     tipo: string;
     precio: number;
-    marca?: string;
-    modelo?: string;
-    imagenURL?: string;
-    existencias?: number;
 }
+
 
 const Articulos = () => {
     const { categoria, subcategoria } = useParams<{ categoria: string; subcategoria: string }>();
@@ -37,32 +33,36 @@ const Articulos = () => {
                     setCargando(false)
                 }
             }
-        }
+        };
         fetchArticulos();
     }, [categoria, subcategoria]);
 
-    if (cargando) return <p>Cargando...</p>;
+    if (cargando) {
+        return (
+            <div className="spinner-container">
+                <div className="music-loader">
+                    <div className="note"></div>
+                    <div className="note"></div>
+                    <div className="note"></div>
+                </div>
+                <p>Cargando productos...</p>
+            </div>
+        );
+    }
 
     return (
         <div>
-            <Header />
-            <div id="background">
-            <h1>Lista de artículos</h1>
-            <div className="grid-container">
-                {articulos.map((articulo) => (
-                    <Card
-                        key={articulo.id}
-                        marca={articulo.marca ?? "Marca desconocida"}
-                        modelo={articulo.modelo ?? articulo.nombre}
-                        imagenURL={articulo.imagenURL}
-                        precio={articulo.precio}
-                        existencias={articulo.existencias}
-                    />
+            <Header></Header>
+            <h1>Lista de articulos</h1>
+            <ul>
+                {articulos.map((articulo: Articulo) => (
+                    <li key={articulo.id}>
+                        {articulo.descripcion} - ${articulo.precio}
+                    </li>
                 ))}
-            </div>
-            </div>
+            </ul>
         </div>
-    );
-};
+    )
+}
 
 export default Articulos;
