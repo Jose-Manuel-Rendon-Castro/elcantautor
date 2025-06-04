@@ -17,7 +17,7 @@ function Header() {
                             <li className='header-items'><Link to="/Guitarras/Acustico">Guitarras acusticas</Link></li>
                             <li className='header-items'><Link to="/Guitarras/Electroacustico">Guitarras electroacusticas</Link></li>
                             <li className='header-items'><Link to="/Guitarras/Electrico">Guitarras electricas</Link></li>
-                            <li className='header-items'><Link to="/Guitarras/Accesorio">Accesorios para guitarra</Link></li>
+                            <li className='header-items'><Link to="/Guitarras/Accesorios">Accesorios para guitarra</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
@@ -26,20 +26,20 @@ function Header() {
                             <li className='header-items'><Link to="/Bajos/Acustico">Bajos acusticos</Link></li>
                             <li className='header-items'><Link to="/Bajos/Electroacustico">Bajos electroacusticos</Link></li>
                             <li className='header-items'><Link to="/Bajos/Electrico">Bajos electricos</Link></li>
-                            <li className='header-items'><Link to="/Bajos/Accesorio">Accesorios para Bajo</Link></li>
+                            <li className='header-items'><Link to="/Bajos/Accesorios">Accesorios para Bajo</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
                         <span>Baterias y percusiones ▾</span>
                         <ul>
-                            <li className='header-items'><Link to="/Percusion/Bateria_Acustica">Bateria acustica</Link></li>
-                            <li className='header-items'><Link to="/Percusion/Bateria_Electrica">Bateria electrica</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Bateria Acustica">Bateria acustica</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Bateria Electrica">Bateria electrica</Link></li>
                             <li className='header-items'><Link to="/Percusion/Tambores">Tambores</Link></li>
                             <li className='header-items'><Link to="/Percusion/Tarolas">Tarolas</Link></li>
                             <li className='header-items'><Link to="/Percusion/Platillos">Platillos</Link></li>
                             <li className='header-items'><Link to="/Percusion/Pedales">Pedales</Link></li>
                             <li className='header-items'><Link to="/Percusion/Latina">Percusíon latina</Link></li>
-                            <li className='header-items'><Link to="/Percusion/Accesorio">Accesorios</Link></li>
+                            <li className='header-items'><Link to="/Percusion/Accesorios">Accesorios</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
@@ -47,7 +47,7 @@ function Header() {
                         <ul>
                             <li className='header-items'><Link to="/Teclados/Electrico">Teclados</Link></li>
                             <li className='header-items'><Link to="/Teclados/Sintetizador">Sintetizadores</Link></li>
-                            <li className='header-items'><Link to="/Teclados/Accesorio">Accesorios</Link></li>
+                            <li className='header-items'><Link to="/Teclados/Accesorios">Accesorios</Link></li>
                         </ul>
                     </li>
                     <li className='header-items'>
