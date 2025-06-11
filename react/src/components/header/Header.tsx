@@ -8,7 +8,9 @@ function Header() {
         <header>
             <nav className="nav">
                 <div className="logo-container">
+                    <Link to="/">
                     <img src={LOGO2} alt="El Cantautor" className='logo' />
+                    </Link>
                 </div>
                <ul>    
                     <li className='header-items'>
@@ -61,6 +63,7 @@ function Header() {
                 </ul>
                     
                 <div id="sesion">
+
                     <Link to="/login" id="leftb">
                         <button>
                             <span>Iniciar Sesión</span>
@@ -72,8 +75,13 @@ function Header() {
                             <span>Registrarse</span>
                         </button>
                     </Link>
-                </div>
 
+                    <Link to="/catalogo">
+                        <button>
+                            <span>Ver Catálogo</span>
+                        </button>
+                    </Link>
+                </div>
             </nav>
         </header>
     );

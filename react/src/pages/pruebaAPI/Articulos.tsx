@@ -2,14 +2,25 @@ import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import { useParams } from "react-router-dom";
 import "../pruebaAPI/Articulos.css";
+import Card from "../../components/articulo/ArticuloTarjeta";
 
-interface Articulo {
+/*interface Articulo {
     id: number;
     nombre: string;
     categoria: string;
     descripcion: string;
     tipo: string;
     precio: number;
+}*/
+
+interface Articulo {
+    id: number;
+    marca: string;
+    modelo: string;
+    descripcion: string;
+    imagenURL: string;
+    precio: number;
+    existencias: number;
 }
 
 
@@ -52,17 +63,24 @@ const Articulos = () => {
 
     return (
         <div>
-            <Header></Header>
-            <h1>Lista de articulos</h1>
-            <ul>
-                {articulos.map((articulo: Articulo) => (
-                    <li key={articulo.id}>
-                        {articulo.descripcion} - ${articulo.precio}
-                    </li>
+            <Header />
+            <br></br><br></br><br></br><br></br>
+            <div className="card-container">
+                {articulos.map((articulo) => (
+                    <Card
+                        key={articulo.id}
+                        id={articulo.id}
+                        marca={articulo.marca}
+                        modelo={articulo.modelo}
+                        descripcion={articulo.descripcion}
+                        imagenURL={articulo.imagenURL}
+                        precio={articulo.precio}
+                        existencias={articulo.existencias}
+                    />
                 ))}
-            </ul>
+            </div>
         </div>
-    )
+    );
 }
 
 export default Articulos;

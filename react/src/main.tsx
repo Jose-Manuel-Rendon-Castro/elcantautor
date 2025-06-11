@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './pages/inicio/MainPage.tsx'
 import Login from './pages/login/Login.tsx'
 import CrearCuenta from './pages/crearCuenta/CrearCuenta.tsx'
+import Catalog from './pages/catalogo/CatalogoPage.tsx'
 import Articulos from './pages/pruebaAPI/Articulos.tsx'
+import { CatalogProvider } from './components/catalogo/CatalogoContext.tsx';
 
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
     element: <CrearCuenta />
   },
   {
+  path: '/catalogo',
+  element: <Catalog />
+  },
+  {
     path: '/:categoria/:subcategoria',
     element: <Articulos />
   },
@@ -33,6 +39,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+     <CatalogProvider>
     <RouterProvider router={router}/>
+    </CatalogProvider>
   </StrictMode>,
 )

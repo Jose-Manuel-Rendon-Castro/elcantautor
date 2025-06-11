@@ -1,0 +1,22 @@
+.catalog-container{
+    position: relative;
+    left: 8px;
+    top: 100px;
+}
+
+@media print {
+    header, nav, button {
+        display: none !important;
+    }
+
+    /* Optional: clean page margins for nice printable layout */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .catalog-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}

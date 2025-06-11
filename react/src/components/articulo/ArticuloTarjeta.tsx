@@ -1,26 +1,44 @@
 import './articuloStyle.css'
+import { useCatalog } from '../catalogo/CatalogoContext';
 
 interface ArticuloProps {
-    marca?: string;
-    modelo?: string;
-    imagenURL?: string;
-    precio?: number;
-    existencias?: number;
+    id: number;
+    marca: string;
+    modelo: string;
+    descripcion: string;
+    imagenURL: string;
+    precio: number;
+    existencias: number;
 }
 
+function Card({ id, marca, modelo, descripcion, imagenURL, precio, existencias }: ArticuloProps)
+{
+    const { addToCatalog } = useCatalog();
 
-function Articulo({ marca = 'Marca no disponible', modelo = 'Modelo no disponible', imagenURL =  './././images/default-image.png', precio = 0, existencias = 0 }: ArticuloProps){
-    const precioFormateado = precio < 0 ? `$${precio}` : 'Precio No Disponible' 
-    const existenciasTexto = existencias < 0 ? `Existencias: ${existencias}` : 'No Disponibles'
+    const handleAdd = () => {
+        addToCatalog({
+            id,
+            marca,
+            modelo,
+            descripcion,
+            imagenURL,
+            precio: precio.toString(), // convert number to string for consistency
+            existencias: existencias.toString()
+        });
+    };
+
     return(
-        <div className="marco" id="marco">
+        <div id="marco">
+            <h3 id='id'>{id}</h3>
             <h3 id='marca'>{marca}</h3>
             <h3 id='modelo'>{modelo}</h3>
-            <img src={imagenURL} alt="Imagen de instrumento"/>
-            <b id='precio'>{precioFormateado}</b>
-            <b id='existencias'>{existenciasTexto}</b>
+            <h3 id='descripcion'>{descripcion}</h3>
+            <img id='img' src={imagenURL} alt="Imagen de instrumento"/>
+            <b id='precio'>{precio}</b>
+            <b id='existencias'>{existencias}</b>
+            <button id='btn' onClick={handleAdd}>Añadir al Catálogo</button>
         </div>
     );
 }
 
-export default Articulo
+export default Card
