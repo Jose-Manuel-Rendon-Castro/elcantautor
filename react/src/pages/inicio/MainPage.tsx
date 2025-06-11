@@ -14,6 +14,14 @@ import Percusiones from "../../assets/Categorias Img/Percusiones.png"
 import Pianos from "../../assets/Categorias Img/Piano.png"
 import Amplificadores from "../../assets/Categorias Img/Amplificadores.png"
 
+import Envios from "../../assets/Beneficios Img/Envios.png"
+import Productos from "../../assets/Beneficios Img/Productos.png"
+import Pagos from "../../assets/Beneficios Img/Pagos.png"
+
+import izquierdaImg from "../../assets/Banner/izquierda.jpg"
+import derechaImg from "../../assets/Banner/derecha.jpg"
+
+
 function App() {
   return(
     <Fragment>
@@ -68,16 +76,71 @@ function App() {
           </div>
         </div>
       </section>
-    
 
-      {/* Testimonios */}
-      <section className="testimonials">
-        <h2>Lo que dicen nuestros clientes</h2>
-        <div className="testimonial">
-          "¡Excelente calidad y atención!" - Juan M.
+
+       {/* Bannner */}
+    <div className="banner-container">
+      <div
+        className="banner-section left"
+        style={{ backgroundImage: `url(${izquierdaImg})` }}
+      >
+        <h1>"Los mejores productos"</h1>
+        <p>-Juan Alatorre</p>
+      </div>
+
+      <div
+        className="banner-section right"
+        style={{ backgroundImage: `url(${derechaImg})` }}
+      >
+        <h1>Compra y recibe en casa</h1>
+        <p>Te decimos cómo</p>
+      </div>
+    </div>  
+    
+       {/* Beneficios */}
+      <section className="benefits">
+        <div className="benefit">
+            <img src={Envios} alt="Envíos gratis" />
+            <div>
+             <strong>¡Envíos gratis y asegurados!</strong>
+            <p>Compra más de $2500 y obten envío gratis, todos nuestros productos viajan asegurados. Si se pierde en el camino te lo reponemos o devolvemos tu dinero.</p>
+            </div>
         </div>
-        <div className="testimonial">
-          "Encontré todo lo que necesitaba para mi banda." - Laura P.
+        <div className="benefit">
+            <img src={Productos} alt="Productos garantizados" />
+            <div>
+            <strong>Productos garantizados</strong>
+            <p>Todos nuestros productos están garantizados. Si tu producto presenta una falla nosotros nos haremos cargo.</p>
+          </div>
+        </div>
+        <div className="benefit">
+            <img src={Pagos} alt="Transacciones seguras" />
+          <div>
+            <strong>Transacciones seguras</strong>
+            <p>Todas nuestras transacciones están protegidas por SSL.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Reseñas de Clientes */}
+      <section className="testimonials">
+        <h2>Reseñas de Clientes</h2>
+        <div className="testimonial-grid">
+          <div className="testimonial">
+            <p>"Excelente calidad en los productos. El envío fue rapidísimo."</p>
+            <span>⭐⭐⭐⭐⭐</span>
+            <h4>- Santiago Quiñonez</h4>
+          </div>
+          <div className="testimonial">
+            <p>"Me atendieron muy bien y resolvieron todas mis dudas. ¡Gracias!"</p>
+            <span>⭐⭐⭐⭐</span>
+            <h4>- Maryjoce Gastelum</h4>
+          </div>
+          <div className="testimonial">
+            <p>"La guitarra que compré superó mis expectativas. ¡Recomendados!"</p>
+            <span>⭐⭐⭐⭐⭐</span>
+            <h4>- Manolo Rendon</h4>
+          </div>
         </div>
       </section>
 
