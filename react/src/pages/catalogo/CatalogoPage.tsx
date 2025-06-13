@@ -14,20 +14,26 @@ export const Catalog: React.FC = () => {
         <div>
             <Header />
             <div className="catalog-container">
-                                    <h2>Mi Catálogo</h2>
-                                    <button onClick={handlePrint}>Imprimir</button>
-                                    <button onClick={clearCatalog}>Limpiar Catálogo</button>
-                                    <br></br>
-                {catalog.map(item => (
-                    <div key={item.id} className="catalog-item">
-                        <h3>{item.marca} {item.modelo}</h3>
-                        <img src={item.imagenURL} alt="Imagen de instrumento" />
-                        <p>{item.descripcion}</p>
-                        <p>Precio: {item.precio}</p>
-                        <p>Existencias: {item.existencias}</p>
-                        <button onClick={() => removeFromCatalog(item.modelo)}>Eliminar</button>
-                    </div>
-                ))}
+                <h2>Mi Catálogo</h2>
+                <button onClick={handlePrint}>Imprimir</button>
+                <button onClick={clearCatalog}>Limpiar Catálogo</button>
+                <br />
+               {catalog.length === 0 ? (
+                <p className="catalog-empty-message">
+                    No hay elementos en el catálogo
+                </p>
+                ) : (
+                    catalog.map(item => (
+                        <div key={item.id} className="catalog-item">
+                            <h3>{item.marca} {item.modelo}</h3>
+                            <img src={item.imagenURL} alt="Imagen de instrumento" />
+                            <p>{item.descripcion}</p>
+                            <p>Precio: {item.precio}</p>
+                            <p>Existencias: {item.existencias}</p>
+                            <button onClick={() => removeFromCatalog(item.modelo)}>Eliminar</button>
+                        </div>
+                    ))
+                )}
             </div>
         </div>
     );

@@ -1,0 +1,68 @@
+/* Styles for the cart button with notification bubble */
+
+#sesion {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* spacing between buttons */
+}
+
+/* Cart Button Styles */
+.cart-button {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4f46e5; /* Indigo-600 */
+  color: white;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover,
+.cart-button:focus {
+  background-color: #4338ca; /* Indigo-700 */
+}
+
+/* Notification Bubble */
+.notification-bubble {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: #ef4444; /* Red-500 */
+  color: white;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  box-shadow: 0 0 0 2px white;
+  pointer-events: none;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #sesion {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cart-button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+}

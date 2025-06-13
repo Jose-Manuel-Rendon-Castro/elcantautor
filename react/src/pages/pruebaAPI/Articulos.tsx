@@ -4,15 +4,6 @@ import { useParams } from "react-router-dom";
 import "../pruebaAPI/Articulos.css";
 import Card from "../../components/articulo/ArticuloTarjeta";
 
-/*interface Articulo {
-    id: number;
-    nombre: string;
-    categoria: string;
-    descripcion: string;
-    tipo: string;
-    precio: number;
-}*/
-
 interface Articulo {
     id: number;
     marca: string;
@@ -23,7 +14,6 @@ interface Articulo {
     existencias: number;
 }
 
-
 const Articulos = () => {
     const { categoria, subcategoria } = useParams<{ categoria: string; subcategoria: string }>();
     const [articulos, setArticulos] = useState<Articulo[]>([]);
@@ -33,15 +23,23 @@ const Articulos = () => {
         const fetchArticulos = async () => {
             if (categoria && subcategoria) {
                 try {
-                    const res = await fetch(`http://localhost:3000/${categoria}/${subcategoria}`)
+                    const res = await fetch(`http://localhost:3000/${categoria}/${subcategoria}`);
                     const data = await res.json();
-                    setArticulos(data);
-                }
-                catch (err) {
-                    console.error('No jalo', err)
-                }
-                finally {
-                    setCargando(false)
+                    console.log("Datos recibidos:", data);
+
+                    // Asegura que 'data' sea un array antes de usarlo
+                    if (Array.isArray(data)) {
+                        setArticulos(data);
+                    } else if (Array.isArray(data.articulos)) {
+                        setArticulos(data.articulos);
+                    } else {
+                        console.warn("Formato de datos inesperado");
+                        setArticulos([]); // vacío si no cumple el formato esperado
+                    }
+                } catch (err) {
+                    console.error("No jalo", err);
+                } finally {
+                    setCargando(false);
                 }
             }
         };
@@ -64,7 +62,7 @@ const Articulos = () => {
     return (
         <div>
             <Header />
-            <br></br><br></br><br></br><br></br>
+            <br /><br /><br /><br />
             <div className="card-container">
                 {articulos.map((articulo) => (
                     <Card
@@ -81,6 +79,6 @@ const Articulos = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Articulos;

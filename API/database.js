@@ -11,3 +11,15 @@ const pool = mysql.createPool({
 });
 
 module.exports = { pool }
+
+pool.getConnection()
+  .then(conn => {
+    console.log('✅ Conexión exitosa a MySQL')
+    conn.release() // liberar conexión
+
+  })
+  .catch(err => {
+    console.error('❌ Error de conexión:', err.message)
+  })
+
+module.exports = { pool }
