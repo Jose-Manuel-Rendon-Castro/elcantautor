@@ -63,19 +63,6 @@ function Header() {
                 </ul>
                     
                 <div id="sesion">
-
-                    <Link to="/login" id="leftb">
-                        <button>
-                            <span>Iniciar Sesión</span>
-                        </button>
-                    </Link>
-
-                    <Link to="/crear-cuenta"id="rightb">
-                        <button>
-                            <span>Registrarse</span>
-                        </button>
-                    </Link>
-
                     <Link to="/catalogo">
                         <button>
                             <span>Ver Catálogo</span>
